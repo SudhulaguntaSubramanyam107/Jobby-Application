@@ -1,0 +1,140 @@
+.detCont {
+  background-color: #000000;
+  color: white;
+}
+
+.failCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobItemLogo1 {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.skillLogo {
+  height: 25px;
+  width: 25px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.lifeAtCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.lifeAtLogo {
+  margin-left: 10px;
+}
+.jdLogoCont {
+  display: flex;
+  flex-direction: row;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+.loc1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.loc {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+.fib {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.jobItem {
+  background-color: #272727;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.jbI1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.h11 {
+  font-size: 12px;
+}
+
+.jobDetCont {
+  font-size: 12px;
+}
+
+.logo1 {
+  height: 40px;
+  width: 40px;
+  margin-top: 13px;
+  margin-right: 10px;
+}
+
+.jdHead {
+  font-size: 15px;
+}
+
+.jdProfCont {
+  display: flex;
+  flex-direction: row;
+}
+
+.jdItem {
+  width: 30%;
+  margin: 5px;
+  padding: 15px;
+  background-color: #272727;
+  border-radius: 10px;
+}
+
+.jdList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.jdMainSimilar {
+  font-size: 20px;
+  margin-left: 40px;
+}
+.jdBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a {
+  margin-top: 15px;
+}
+.visitCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

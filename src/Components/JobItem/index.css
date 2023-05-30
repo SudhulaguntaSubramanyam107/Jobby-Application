@@ -1,0 +1,38 @@
+.jobItemLogo {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+.loc1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.loc {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+.fib {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.jobItem {
+  background-color: #272727;
+  margin: 10px;
+  padding: 10px;
+}
+
+.jbI1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.h11 {
+  font-size: 12px;
+}
