@@ -99,7 +99,7 @@
   font-size: 15px;
 }
 
-.jdProfCont {
+.jdProfCont1 {
   display: flex;
   flex-direction: row;
 }
@@ -137,4 +137,60 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.BsStar {
+  color: gold;
+  margin-top: 13px;
+  margin-right: 5px;
+}
+
+.starCont {
+  display: flex;
+  flex-direction: row;
+}
+
+.dfc {
+  margin-top: 14px;
+  margin-right: 7px;
+}
+
+.bfc1 {
+  margin-top: 14px;
+  margin-right: 4px;
+}
+
+@media all and (orientation: portrait) {
+  .jdList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .jdItem {
+    width: 70%;
+    margin: 5px;
+    padding: 15px;
+    background-color: #272727;
+    border-radius: 10px;
+  }
+
+  .lifeAtCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .lifeAtLogo {
+    order: 1;
+  }
+
+  .skillLogo {
+    height: 15px;
+    width: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 }

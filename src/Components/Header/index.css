@@ -28,6 +28,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 10vh;
+  width: 100%;
   color: white;
   padding: 10px;
   margin-bottom: 0px;
@@ -58,4 +59,18 @@
   width: 100px;
   height: 30px;
   border-radius: 5px;
+}
+
+@media all and (orientation: portrait) {
+  .head {
+    background-color: #272727;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    min-width: 170% !important;
+    color: white;
+    padding: 10px;
+    margin-bottom: 0px;
+  }
 }

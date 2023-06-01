@@ -1,4 +1,7 @@
 import {Link} from 'react-router-dom'
+import {BsStarFill} from 'react-icons/bs'
+import {IoLocationSharp} from 'react-icons/io5'
+import {VscBriefcase} from 'react-icons/vsc'
 import './index.css'
 
 const JobItem = props => {
@@ -16,17 +19,20 @@ const JobItem = props => {
               />
               <div>
                 <h1 className="h11">{jobItem.title}</h1>
-                <p>{jobItem.rating}</p>
+                <div className="starCont">
+                  <BsStarFill className="JBsStar" />
+                  <p>{jobItem.rating}</p>
+                </div>
               </div>
             </div>
             <div className="fib">
               <div className="loc1">
                 <div className="loc">
-                  <img src="" alt="" />
+                  <IoLocationSharp className="bfc" />
                   <p>{jobItem.location}</p>
                 </div>
                 <div className="loc">
-                  <img src="" alt="" />
+                  <VscBriefcase className="bfc" />
                   <p>{jobItem.employment_type}</p>
                 </div>
               </div>

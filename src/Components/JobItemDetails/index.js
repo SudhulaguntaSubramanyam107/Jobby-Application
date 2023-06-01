@@ -1,4 +1,7 @@
 import {Component} from 'react'
+import {BsStarFill} from 'react-icons/bs'
+import {IoLocationSharp} from 'react-icons/io5'
+import {VscBriefcase} from 'react-icons/vsc'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Header from '../Header'
@@ -68,17 +71,20 @@ class JobItemDetails extends Component {
               />
               <div>
                 <h1 className="h11">{jobItem.title}</h1>
-                <p>{jobItem.rating}</p>
+                <div className="starCont">
+                  <BsStarFill className="BsStar" />
+                  <p>{jobItem.rating}</p>
+                </div>
               </div>
             </div>
             <div className="fib">
               <div className="loc1">
                 <div className="loc">
-                  <img src="" alt="" />
+                  <IoLocationSharp className="dfc" />
                   <p>{jobItem.location}</p>
                 </div>
                 <div className="loc">
-                  <img src="" alt="" />
+                  <VscBriefcase className="dfc" />
                   <p>{jobItem.employment_type}</p>
                 </div>
               </div>
@@ -130,7 +136,7 @@ class JobItemDetails extends Component {
                   <div className="jdProfCont">
                     <h1 className="jdHead">{item.title}</h1>
                     <div className="jdProfCont1">
-                      <img src="" alt="" />
+                      <BsStarFill className="JBsStar bfc1" />
                       <p>{item.rating}</p>
                     </div>
                   </div>
@@ -138,12 +144,12 @@ class JobItemDetails extends Component {
                 <h1 className="h11">Description</h1>
                 <p>{item.job_description}</p>
                 <div className="jdBottom">
-                  <div>
-                    <img src="" alt="" />
+                  <div className="loc">
+                    <IoLocationSharp className="bfc1" />
                     <p>{item.location}</p>
                   </div>
-                  <div>
-                    <img src="" alt="" />
+                  <div className="loc">
+                    <VscBriefcase className="bfc1" />
                     <p>{item.employment_type}</p>
                   </div>
                 </div>

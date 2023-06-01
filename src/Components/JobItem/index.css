@@ -36,3 +36,37 @@
 .h11 {
   font-size: 12px;
 }
+.JBsStar {
+  color: gold;
+  margin-top: 14px;
+  margin-right: 5px;
+}
+
+.loc {
+  margin-top: 10px;
+  margin-right: 4px;
+}
+
+.bfc {
+  margin-top: 14px;
+  margin-right: 4px;
+}
+
+@media all and (orientation: portrait) {
+  .jobItem {
+    width: 80vw !important;
+    font-size: 8px !important;
+    margin-left: 7px !important;
+  }
+
+  .JBsStar {
+    color: gold;
+    margin-top: 9px;
+    margin-right: 5px;
+  }
+
+  .bfc {
+    margin-top: 9px;
+    margin-right: 4px;
+  }
+}

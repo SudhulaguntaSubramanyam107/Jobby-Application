@@ -56,7 +56,7 @@ class Jobs extends Component {
     profDetails: '',
     jobsFetchedList: [],
     jobApiStatus: apiStatusConstants.initial,
-    employeeType: '',
+    employeeType: [],
     minPackage: '',
     searchKey: '',
   }
@@ -171,7 +171,7 @@ class Jobs extends Component {
         return (
           <div>
             <ul className="jobItems">
-              {newList.map(eachItem => (
+              {jobsFetchedList.map(eachItem => (
                 <JobItem key={eachItem.id} jobItem={eachItem} />
               ))}
             </ul>
@@ -220,40 +220,53 @@ class Jobs extends Component {
   }
 
   onSearchStart = () => {
-    const {searchKey, jobsFetchedList} = this.state
-    console.log(searchKey)
-    const newList = jobsFetchedList.filter(eachItem =>
-      eachItem.title.toLowerCase().includes(searchKey.toLowerCase()),
-    )
-    return newList
+    this.fetchJobs()
   }
 
   onSelectRadio = event => {
     if (event.target.checked === true) {
-      this.setState({minPackage: event.target.id})
-      this.fetchJobs()
+      this.setState({minPackage: event.target.value}, this.fetchJobs)
     } else {
-      this.setState({minPackage: ''})
-      this.fetchJobs()
+      this.setState({minPackage: ''}, this.fetchJobs)
     }
   }
 
   onSelectCheckbox = event => {
     const {employeeType} = this.state
-    if (event.target.checked === true) {
-      if (employeeType === '') {
-        this.setState({employeeType: event.target.id})
-      } else {
-        const empType = `${employeeType},${event.target.id}`
-        this.setState({employeeType: empType})
-      }
-      this.fetchJobs()
-    } else if (event.target.checked === false) {
-      this.setState({
-        employeeType: employeeType.replace(event.target.value, 'hi'),
-      })
-      this.fetchJobs()
+    const notInList = employeeType.filter(
+      eachItem => eachItem === event.target.id,
+    )
+    if (notInList.length === 0) {
+      this.setState(
+        prevState => ({
+          employeeType: [...prevState.employeeType, event.target.id],
+        }),
+        this.fetchJobs,
+      )
+    } else {
+      const filteredList = employeeType.filter(
+        eachItem => eachItem !== event.target.id,
+      )
+      this.setState({employeeType: filteredList}, this.fetchJobs)
     }
+
+    /* if (event.target.checked === true) {
+      if (employeeType.includes(event.target.id)) {
+        this.fetchJobs()
+      } else {
+        const newEmpList = employeeType.push(event.target.id)
+        this.setState({employeeType: newEmpList}, this.fetchJobs)
+      }
+    } else if (event.target.checked === false) {
+      if (employeeType.includes(event.target.id)) {
+        const newList = employeeType.filter(
+          eachItem => eachItem !== event.target.id,
+        )
+        this.setState({employeeType: newList}, this.fetchJobs)
+      } else {
+        this.fetchJobs()
+      }
+    } */
   }
 
   render() {
@@ -264,8 +277,7 @@ class Jobs extends Component {
       minPackage,
       employeeType,
     } = this.state
-    console.log(minPackage, employeeType)
-    const newList = searchKey === '' ? jobsFetchedList : this.onSearchStart()
+    console.log(employeeType)
     return (
       <div>
         <Header />
@@ -303,6 +315,7 @@ class Jobs extends Component {
                       className="cb"
                       name="radio1"
                       onChange={this.onSelectRadio}
+                      value={eachItem.salaryRangeId}
                     />
                     <label htmlFor={eachItem.salaryRangeId} className="p1">
                       {eachItem.label}
@@ -329,7 +342,7 @@ class Jobs extends Component {
                 <BsSearch className="search-icon search1" />
               </button>
             </div>
-            {this.renderJobs(newList)}
+            {this.renderJobs()}
           </div>
         </div>
       </div>

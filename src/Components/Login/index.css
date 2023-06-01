@@ -9,8 +9,8 @@
 }
 .bg {
   background-color: #272727;
-  min-width: 25vw;
-  height: 50vh;
+  min-width: 25%;
+  height: 50%;
   text-align: center;
   padding: 30px;
 }
@@ -20,11 +20,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  margin-left: 20px;
+  flex-shrink: 1px;
 }
 label {
   color: white;
   font-size: 13px;
+  flex-shrink: 1px;
 }
 
 input {
@@ -34,11 +35,14 @@ input {
   width: 280px;
   padding: 7px;
   border-radius: 4px;
+  flex-shrink: 1px;
+  flex-shrink: 1px;
 }
 
 .logo {
   height: 50px;
   margin-bottom: 30px;
+  flex-shrink: 1px;
 }
 
 #button {

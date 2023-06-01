@@ -10,7 +10,7 @@
 }
 
 .h2 {
-  width: 50vw;
+  width: 50%;
   padding: 40px;
 }
 
@@ -22,4 +22,17 @@
   width: 100px;
   height: 30px;
   border-radius: 5px;
+}
+
+@media all and (orientation: portrait) {
+  .home {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+    height: 100vh;
+    background-size: cover;
+    color: white;
+  }
+  .h2 {
+    width: 80%;
+    padding: 20px;
+  }
 }
