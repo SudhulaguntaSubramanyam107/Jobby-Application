@@ -86,6 +86,9 @@ class Login extends Component {
             </button>
           </form>
           {isError && <p className="error">*{errorMsg}</p>}
+            <p className="logReg">
+            Does not have an Account, <a href="/register">Register</a>
+          </p>
         </div>
       </div>
     )
